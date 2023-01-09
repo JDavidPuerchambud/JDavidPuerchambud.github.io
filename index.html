@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset=UTF-8">
+    <link rel="stylesheet" href="estetica.css">
+    <link rel="stylesheet" href="predeterminado.css">
+    <title>Encriptador</title>
+</head>
+
+<body class="imagen">
+    <header>
+        <div class="caja">
+            <h1><img src="Logo.png"><span>ONE</span></h1>
+        </div>
+    </header>
+
+
+    <main>
+
+        <h2 id="tcolor">Encriptador/Desencriptador</h2>
+        <ul class="elem">
+            <li>
+                <textarea id="panel" placeholder="Ingrese Texto Aqui."></textarea>
+                <button id="bu" onclick="imp()"><span>Encriptar</span></button>
+
+            </li>
+            <li>
+                <textarea id="panel2" placeholder=" " onkeyup="boton.onclick= imp()" readonly="readonly"></textarea>
+                <button id="des" onclick="desimp()"><span>Desencriptar</span></button>
+                <button id="copi" onclick="copiartext()"><span>Copiar</span></button>
+            </li>
+        </ul>
+
+    </main>
+
+    <script>
+        var abc = [" ", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+        /*var texto = document.querySelector("#panel");
+        var boton = document.querySelector("#bu");
+        var boton2 = document.querySelector("#des"); Esta hubiera sido una forma pero no es lo mejor ya que no agarraria */
+        var txt = document.getElementById("tcolor");
+        setInterval(changeColor, 1000);
+        function changeColor() {
+            var r = Math.floor(Math.random() * 255);
+            var g = Math.floor(Math.random() * 255);
+            var b = Math.floor(Math.random() * 255);
+            txt.style.color = "RGB(" + r + ", " + g + ", " + b + ")";
+        }
+        changeColor();
+
+        function imp() {
+
+            var textobot = document.getElementById("panel").value;
+
+            /////////// desarrollo texbot
+            if (textobot == "") {
+            } else {
+                if (comprueba(textobot)) {
+                    alert("Estas usando mayuscúlas, acentos o caracteres especiales, por favor vuelve a intentarlo.");
+                    textobot = "";
+                } else {
+                    //////////////////////////////////////////////////////////////////////////////////////////
+                    ///////ENCRIPTADOR  ENCRIPTADOR  ENCRIPTADOR  ENCRIPTADOR  ENCRIPTADOR  ENCRIPTADOR  ENCRIPTADOR  
+                    textobot = textobot.replace(/e/g, "enter");
+                    textobot = textobot.replace(/i/g, "imes");
+                    textobot = textobot.replace(/a/g, "ai");
+                    textobot = textobot.replace(/o/g, "ober");
+                    textobot = textobot.replace(/u/g, "ufat");
+                }
+            }
+
+            //////////////////////////////////////////////////////////////////////////////////////////
+            document.getElementById("panel2").value = textobot;
+            //textobot = document.getElementById("panel2").value; NO TE GENERA ERROR PERO SE GUARDA EN BLANCO
+
+
+            ////////////////////////////////////////////////////////////////// el clean 
+
+            document.getElementById("panel").value = "";/////////// LIMPIA
+        }
+        function comprueba(texto) {
+            var bool = true;
+            var acierto = 0;
+
+            for (var i = 0; i < (texto.length); i++) {
+                for (var j = 0; j < 27; j++) {
+                    if (texto[i] === abc[j]) {
+                        acierto = acierto + 1;
+                        break;
+                    }
+                }
+            }
+            if (acierto == texto.length) {
+                bool = false;
+            }
+            return (bool);
+        }
+        ///////////////////////////////////////////////////////////////////////////////////////////
+        /////////// Desencriptador    Desencriptador    Desencriptador    Desencriptador    Desencriptador//////////////
+
+        function desimp() {
+            var textobot = document.getElementById("panel").value;
+
+            /////////// desarrollo texbot
+            if (textobot == "") {
+            } else {
+                if (comprueba(textobot)) {
+                    alert("Estas usando mayuscúlas, acentos o caracteres especiales, por favor vuelve a intentarlo.");
+                    textobot = "";
+                } else {
+                    //////////////////////////////////////////////////////////////////////////////////////////
+                    ///////ENCRIPTADOR  ENCRIPTADOR  ENCRIPTADOR  ENCRIPTADOR  ENCRIPTADOR  ENCRIPTADOR  ENCRIPTADOR  
+                    textobot = textobot.replace(/enter/g, "e");
+                    textobot = textobot.replace(/imes/g, "i");
+                    textobot = textobot.replace(/ai/g, "a");
+                    textobot = textobot.replace(/ober/g, "o");
+                    textobot = textobot.replace(/ufat/g, "u");
+                }
+            }
+
+            //////////////////////////////////////////////////////////////////////////////////////////
+            document.getElementById("panel2").value = textobot;
+            //textobot = document.getElementById("panel2").value; NO TE GENERA ERROR PERO SE GUARDA EN BLANCO
+
+            ////////////////////////////////////////////////////////////////// el clean 
+
+            document.getElementById("panel").value = "";/////////// LIMPIA
+        }
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////// COPIAR  COPIAR  COPIAR  COPIAR  COPIAR  COPIAR  COPIAR  COPIAR  COPIAR  
+        function copiartext() {
+            var textocopi = document.getElementById("panel2").value;
+            console.log(textocopi);
+            navigator.clipboard.writeText(textocopi);
+            alert("Texto copiado.");
+            //textocopi.select();
+            //textocopi.setSelectionRange(0, 99999);
+            //document.execCommand("copy");
+
+        }
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+
+
+</html>

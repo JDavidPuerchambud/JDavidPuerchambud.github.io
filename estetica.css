@@ -1,0 +1,154 @@
+.imagen{
+    
+    background-image: url(pin.jpg);
+}
+#panel{
+    font-family: 'Rubik', sans-serif;
+    resize: none;
+    width: 300px;
+    height: 300px;
+    padding-top: 10px;
+    padding-left: 15px;
+    font-size: 20px;
+    border: 3px solid #af40ff;
+    border-radius: 13px;
+}
+#panel2{
+    font-family: 'Rubik', sans-serif;
+    resize: none;
+    width: 300px;
+    height: 300px;
+    padding-top: 10px;
+    padding-left: 15px;
+    font-size: 20px;
+    border: 3px solid #af40ff;
+    border-radius: 13px;
+}
+#bu{
+    border:none;
+    border-radius: 8px;
+    padding: 4px;
+    overflow: hidden;/*el desbordado te lo esconde*/
+    cursor: pointer;
+    background-image: linear-gradient(150deg, #00ddeb, #5b42f3 50%, #af40ff);
+}
+#bu span{
+    display:flex; /*Este es para que te los muestre como seleccione*/
+    border-radius: 6px;
+    padding: 10px 40px;
+
+
+    color: #fff;
+    font-size: 22px;
+    background-color:#111 ;
+    transition: 300ms;
+}
+#bu:hover span{
+    background: transparent;
+}
+/*///////////////////////////////////*/
+#des{
+    border:none;
+    border-radius: 8px;
+    padding: 4px;
+    overflow: hidden;/*el desbordado te lo esconde*/
+    cursor: pointer;
+    background-image: linear-gradient(150deg, #00ddeb, #5b42f3 50%, #af40ff);
+}
+#des span{
+    display:flex; /*Este es para que te los muestre como seleccione*/
+    border-radius: 6px;
+    padding: 10px 40px;
+
+
+    color: #fff;
+    font-size: 22px;
+    background-color:#111 ;
+    transition: 300ms;
+}
+#des:hover span{
+    background: transparent;
+}
+/*////////////////////////////////////////////////////// */
+#copi{
+    border:none;
+    border-radius: 8px;
+    padding: 4px;
+    overflow: hidden;/*el desbordado te lo esconde*/
+    cursor: pointer;
+    background-image: linear-gradient(150deg, #00ddeb, #5b42f3 50%, #af40ff);
+}
+#copi span{
+    display:flex; /*Este es para que te los muestre como seleccione*/
+    border-radius: 6px;
+    padding: 10px 40px;
+
+
+    color: #fff;
+    font-size: 22px;
+    background-color:#111 ;
+    transition: 300ms;
+}
+#copi:hover span{
+    background: transparent;
+}
+#panel::placeholder{
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    text-align:center;
+}
+#panel2::placeholder{
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    background-image: url(Muñeco\ \(1\).png);
+    height: 300px;
+}
+.caja{
+    position: relative;
+    width: 940px;
+    margin: 20px auto;
+    margin-left: 30px;
+
+}
+
+.caja h1 span{
+    font-family: 'Rubik', sans-serif;
+    color: #fff;
+    text-align: justify;
+    font-size: 40px;
+    padding: 60px 0;
+}
+.caja h1 img{
+    background-color: #ffffff;
+    position: relative;
+    display: inline-block;
+    padding: 15px 0;
+
+
+}
+main h2{
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    color: #ffffff;
+    font-size: 40px;
+    padding: 20px;
+}
+.elem li{
+    text-align: center;
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid #af40ff;
+    border-radius: 10px;
+
+}
+.elem{
+
+
+    width: 940px;
+    margin: 0 auto;
+}
+
